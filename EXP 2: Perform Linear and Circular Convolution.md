@@ -86,5 +86,5 @@ xgrid();
 <img width="700" height="300" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/19bc2d27-0eeb-4b6b-b14d-e529e19c9479" />
 
 ## RESULT: 
-Linear and circular convolution of the given sequences were successfully performed in SCILAB.
+Linear and circular convolution of the sequences were successfully performed in SCILAB and
 The results were plotted.
