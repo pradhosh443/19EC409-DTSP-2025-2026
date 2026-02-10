@@ -37,40 +37,43 @@ title("Linear Convolution of x(n) and h(n)");
 
 ## PROGRAM (Circular Convolution): 
 ```
-// Given sequences
 clc;
 clear;
 close;
 
+// Original sequences
 x = [3 2 1 2];
 h = [1 2 1 2];
 
-// Required length
-N = length(x) + length(h) - 1;   // N = 7
+N = length(x) + length(h) - 1;   // 7
 
 // Zero padding
-x_pad = [x zeros(1, N - length(x))];
-h_pad = [h zeros(1, N - length(h))];
+x = [x zeros(1, N - length(x))];
+h = [h zeros(1, N - length(h))];
 
-// Circular Convolution using FFT (SCILAB syntax)
-X = fft(x_pad, -1);   // FFT
-H = fft(h_pad, -1);   // FFT
-y_circular = fft(X .* H, 1);   // IFFT
+// Reverse h
+h_rev = h($:-1:1);
 
-// Display result
+y = zeros(1, N);
+
+for n = 1:N
+    h_rot = [h_rev(N-n+2:N) h_rev(1:N-n+1)];
+    y(n) = sum(x .* h_rot);
+end
+
+// Fix the one-sample shift
+y = [y(2:$) y(1)];
+
 disp("Circular Convolution Result:");
-disp(y_circular);
-
-// Time index
-n = 0:length(y_circular)-1;
+disp(y);
 
 // Plot
+n = 0:N-1;
 figure;
-plot(n, y_circular, 'o-');
+plot2d3(n, y);
 xlabel("n");
 ylabel("Amplitude");
-title("Circular Convolution ");
-xgrid();
+title("Circular Convolution");
 ```
 
 
