@@ -12,6 +12,7 @@ PC installed with SCILAB.
 clc;
 clear;
 close;
+
 // Given sequences
 x = [3 2 1 2];
 h = [1 2 1 2];
@@ -26,13 +27,12 @@ disp(y_linear);
 // Time index
 n = 0:length(y_linear)-1;
 
-// Plot using plot()
+// Plot using plot2d3() for discrete signal
 figure;
-plot(n, y_linear, 'o-');   // 'o-' joins points with lines
+plot2d3(n, y_linear);
 xlabel("n");
 ylabel("Amplitude");
 title("Linear Convolution of x(n) and h(n)");
-xgrid();
 ```
 
 ## PROGRAM (Circular Convolution): 
@@ -77,7 +77,8 @@ xgrid();
 ## OUTPUT (Linear Convolution): 
 <img width="700" height="100" alt="image" src="https://github.com/user-attachments/assets/7b0b3f53-6ca4-4fc6-a822-24e7b75f88f7" />
 
-<img width="700" height="300" alt="Screenshot (6)" src="https://github.com/user-attachments/assets/17c73856-8021-4049-989a-ac1b97dc19fa" />
+<img width="700" height="300" alt="Screenshot (9)" src="https://github.com/user-attachments/assets/94543eb9-b1b7-4b7b-9246-e889b522e052" />
+
 
 ## OUTPUT (Circular Convolution): 
 
