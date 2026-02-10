@@ -87,7 +87,7 @@ title("Circular Convolution");
 
 <img width="700" height="100" alt="Screenshot 2026-02-07 105235" src="https://github.com/user-attachments/assets/911def27-01e3-4ef9-a517-4a3558ff6f8e" />
 
-<img width="700" height="300" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/19bc2d27-0eeb-4b6b-b14d-e529e19c9479" />
+<img width="700" height="300" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/e4dd6ade-e8e9-49dc-b435-72fa0b37646f" />
 
 ## RESULT: 
 Linear and circular convolution of the sequences were successfully performed in SCILAB and
